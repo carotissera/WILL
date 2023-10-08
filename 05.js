@@ -4,6 +4,7 @@
   código dentro de las funciones ya definidas. 
   No comentar la funcion 
 */
+
 function pluck(array, propiedad) {
   // La función llamada 'pluck' recibe como argumento un array de objetos llamado 'array' y el nombre de una
   // propiedad.
@@ -14,9 +15,20 @@ function pluck(array, propiedad) {
   // Pista: es una buena oportunidad para usar map.
 
   // Tu código acá:
+ 
+var newarray=[];
+  console.log(array)
+  console.log(array[0][propiedad])
+  for(var i=0; i< array.length; i++){
+    newarray.push(array[i][propiedad]);
+   
+  }
+  return newarray;
 
 }
 
+
+console.log (pluck([{ name: 'TV LCD', price: 100}, { name: 'Computadora', price: 500 }],"name"));
 // No modifiques nada debajo de esta linea //
 
 module.exports = pluck
